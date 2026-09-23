@@ -25,6 +25,7 @@ function Register() {
     fatherProfession: "",
 
     // Account information
+    accountName: "",
     username: "",
     password: "",
     confirmPassword: "",
@@ -100,6 +101,7 @@ function Register() {
       !formData.section ||
       !formData.email ||
       !formData.dateOfBirth ||
+      !formData.accountName ||
       !formData.username ||
       !formData.password ||
       !formData.confirmPassword
@@ -211,6 +213,9 @@ function Register() {
 
       fatherProfession:
         formData.fatherProfession,
+
+      accountName:
+        formData.accountName,
 
       username:
         formData.username,
@@ -370,76 +375,20 @@ function Register() {
                 </div>
 
 
-                {/* Registration */}
+                {/* DOB + Gender */}
                 <div className="form-row">
 
                   <div className="form-group">
 
                     <label>
-                      Index No. <span>*</span>
+                      Date of Birth <span>*</span>
                     </label>
 
                     <input
-                      type="text"
-                      name="indexNo"
-                      value={formData.indexNo}
+                      type="date"
+                      name="dateOfBirth"
+                      value={formData.dateOfBirth}
                       onChange={handleChange}
-                      placeholder="Index number"
-                    />
-
-                  </div>
-
-
-                  <div className="form-group">
-
-                    <label>
-                      Select Course <span>*</span>
-                    </label>
-
-                    <select
-                      name="courseName"
-                      value={formData.courseName}
-                      onChange={handleChange}
-                    >
-
-                      <option value="">
-                        Select course
-                      </option>
-
-                      <option value="Course A">
-                        Course A
-                      </option>
-
-                      <option value="Course B">
-                        Course B
-                      </option>
-
-                      <option value="Course C">
-                        Course C
-                      </option>
-
-                    </select>
-
-                  </div>
-
-                </div>
-
-
-                {/* Roll + Section */}
-                <div className="form-row">
-
-                  <div className="form-group">
-
-                    <label>
-                      Roll No. <span>*</span>
-                    </label>
-
-                    <input
-                      type="text"
-                      name="rollNo"
-                      value={formData.rollNo}
-                      onChange={handleChange}
-                      placeholder="Roll number"
                     />
 
                   </div>
@@ -480,21 +429,74 @@ function Register() {
                 </div>
 
 
-                {/* Email + DOB */}
+                {/* Grade + StudentType */}
                 <div className="form-row">
 
                   <div className="form-group">
 
                     <label>
-                      Email <span>*</span>
+                      Grade <span>*</span>
                     </label>
 
                     <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
+                      type="text"
+                      name="grade"
+                      value={formData.grade}
                       onChange={handleChange}
-                      placeholder="student@example.com"
+                      placeholder="Current Grade"
+                    />
+
+                  </div>
+            <div className="form-group">
+
+                    <label>
+                      Student Type <span>*</span>
+                    </label>
+
+                    <select
+                      name="studentType"
+                      value={formData.studentType}
+                      onChange={handleChange}
+                    >
+
+                      <option value="">
+                        Select student type
+                      </option>
+
+                      <option value="Primary">
+                        Primary
+                      </option>
+
+                      <option value="Secondary">
+                        Secondary
+                      </option>
+
+                      <option value="Higher">
+                        Higher
+                      </option>
+
+                    </select>
+
+                  </div>
+
+                </div>
+
+
+                {/* Address + Zip */}
+                <div className="form-row">
+
+                  <div className="form-group">
+
+                    <label>
+                      Address <span>*</span>
+                    </label>
+
+                    <input
+                      type="text"
+                      name="address"
+                      value={formData.address}
+                      onChange={handleChange}
+                      placeholder="Enter address"
                     />
 
                   </div>
@@ -503,14 +505,119 @@ function Register() {
                   <div className="form-group">
 
                     <label>
-                      Date of Birth <span>*</span>
+                      Zip Code <span>*</span>
+                    </label>
+
+                    <input
+                      type="text"
+                      name="zipCode"
+                      value={formData.zipCode}
+                      onChange={handleChange}
+                      placeholder="Enter zip code"
+                    />
+
+                  </div>
+
+                </div>
+
+
+                {/* City + District */}
+                <div className="form-row">
+
+                  <div className="form-group">
+
+                    <label>
+                      City <span>*</span>
+                    </label>
+
+                    <input
+                      type="text"
+                      name="city"
+                      value={formData.city}
+                      onChange={handleChange}
+                      placeholder="Enter city"
+                    />
+
+                  </div>
+
+
+                  <div className="form-group">
+
+                    <label>
+                      District <span>*</span>
+                    </label>
+
+                    <select
+                      name="district"
+                      value={formData.district}
+                      onChange={handleChange}
+                    >
+
+                      <option value="">
+                        Select district
+                      </option>
+
+                      <option value="District1">
+                        District 1
+                      </option>
+
+                      <option value="District2">
+                        District 2
+                      </option>
+
+                      <option value="District3">
+                        District 3
+                      </option>
+
+                      <option value="District4">
+                        District 4
+                      </option>
+
+                      <option value="District5">
+                        District 5
+                      </option>
+
+                      <option value="District6">
+                        District 6
+                      </option>
+
+                    </select>
+
+                  </div>
+
+                </div>
+
+                {/* AdmissionDate + ContactNo */}
+                <div className="form-row">
+
+                  <div className="form-group">
+
+                    <label>
+                      Admission Date <span>*</span>
                     </label>
 
                     <input
                       type="date"
-                      name="dateOfBirth"
-                      value={formData.dateOfBirth}
+                      name="admissionDate"
+                      value={formData.admissionDate}
                       onChange={handleChange}
+                    />
+
+                  </div>
+
+
+                  <div className="form-group">
+
+                    <label>
+                      Contact No <span>*</span>
+                    </label>
+
+                    <input
+                      type="text"
+                      name="contactNo"
+                      value={formData.contactNo}
+                      onChange={handleChange}
+                      placeholder="Enter contact number"
                     />
 
                   </div>
@@ -647,129 +754,146 @@ function Register() {
 
               </section>
 
+
+              <section className="account-section">
+
+                <h2>Account Details</h2>
+
+                <div className="section-line"></div>
+
+
+                <div className="form-row">
+
+                  <div className="form-group">
+
+                    <label>
+                      Name <span>*</span>
+                    </label>
+
+                    <input
+                      type="text"
+                      name="accountName"
+                      value={formData.accountName}
+                      onChange={handleChange}
+                      placeholder="Enter account holder name"
+                    />
+
+                  </div>
+
+
+                  <div className="form-group">
+
+                    <label>
+                      Username <span>*</span>
+                    </label>
+
+                    <input
+                      type="text"
+                      name="username"
+                      value={formData.username}
+                      onChange={handleChange}
+                      placeholder="Create a username"
+                    />
+
+                  </div>
+
+                </div>
+
+
+                <div className="form-row">
+
+                  <div className="form-group">
+
+                    <label>
+                      Password <span>*</span>
+                    </label>
+
+                    <div className="password-input-wrap">
+                      <input
+                        type={showPassword ? "text" : "password"}
+                        name="password"
+                        value={formData.password}
+                        onChange={handleChange}
+                        placeholder="Minimum 8 characters"
+                        className="password-input"
+                      />
+
+                      <button
+                        type="button"
+                        className="password-toggle"
+                        onClick={() =>
+                          setShowPassword((prev) => !prev)
+                        }
+                        aria-label={
+                          showPassword
+                            ? "Hide password"
+                            : "Show password"
+                        }
+                      >
+                        {showPassword ? (
+                          <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M3 3.5L20.5 21l-1.4 1.4L15.8 20A12.9 12.9 0 0 1 12 21c-4.7 0-8.7-2.7-11-6.6a15.8 15.8 0 0 1 3.1-4.1L3 3.5zm8.4 9.4l2.9 2.9a3 3 0 0 1-2.9-2.9zm-1.3-1.3L6 7.9A10.5 10.5 0 0 0 1 12c2.3 3.9 6.3 6.6 11 6.6 2.1 0 4-.5 5.7-1.5l-3.5-3.5A3 3 0 0 1 10.1 11.6zm8.6-4.7A13 13 0 0 1 23 12c-2.3 3.9-6.3 6.6-11 6.6a10.8 10.8 0 0 1-4.9-1.2l2.4-2.4A3 3 0 0 0 15 12c0-.7-.2-1.4-.5-2l3.5-3.5zm-5.6-3.3A7.7 7.7 0 0 1 12 6c4.7 0 8.7 2.7 11 6.6-.7 1.1-1.6 2.2-2.6 3.1l-1.2-1.2A10.1 10.1 0 0 0 20.4 12c-1.7-2.6-4.1-4.2-7.1-4.9l-2.6-2.6z" fill="currentColor"/>
+                          </svg>
+                        ) : (
+                          <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 5C6.5 5 1.9 8.8 0 12c1.9 3.2 6.5 7 12 7s10.1-3.8 12-7c-1.9-3.2-6.5-7-12-7zm0 11.5A4.5 4.5 0 1 1 12 7a4.5 4.5 0 0 1 0 9.5zm0-2A2.5 2.5 0 1 0 12 9a2.5 2.5 0 0 0 0 5.5z" fill="currentColor"/>
+                          </svg>
+                        )}
+                      </button>
+                    </div>
+
+                  </div>
+
+
+                  <div className="form-group">
+
+                    <label>
+                      Confirm Password <span>*</span>
+                    </label>
+
+                    <div className="password-input-wrap">
+                      <input
+                        type={showConfirmPassword ? "text" : "password"}
+                        name="confirmPassword"
+                        value={formData.confirmPassword}
+                        onChange={handleChange}
+                        placeholder="Confirm your password"
+                        className="password-input"
+                      />
+
+                      <button
+                        type="button"
+                        className="password-toggle"
+                        onClick={() =>
+                          setShowConfirmPassword((prev) => !prev)
+                        }
+                        aria-label={
+                          showConfirmPassword
+                            ? "Hide confirm password"
+                            : "Show confirm password"
+                        }
+                      >
+                        {showConfirmPassword ? (
+                          <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M3 3.5L20.5 21l-1.4 1.4L15.8 20A12.9 12.9 0 0 1 12 21c-4.7 0-8.7-2.7-11-6.6a15.8 15.8 0 0 1 3.1-4.1L3 3.5zm8.4 9.4l2.9 2.9a3 3 0 0 1-2.9-2.9zm-1.3-1.3L6 7.9A10.5 10.5 0 0 0 1 12c2.3 3.9 6.3 6.6 11 6.6 2.1 0 4-.5 5.7-1.5l-3.5-3.5A3 3 0 0 1 10.1 11.6zm8.6-4.7A13 13 0 0 1 23 12c-2.3 3.9-6.3 6.6-11 6.6a10.8 10.8 0 0 1-4.9-1.2l2.4-2.4A3 3 0 0 0 15 12c0-.7-.2-1.4-.5-2l3.5-3.5zm-5.6-3.3A7.7 7.7 0 0 1 12 6c4.7 0 8.7 2.7 11 6.6-.7 1.1-1.6 2.2-2.6 3.1l-1.2-1.2A10.1 10.1 0 0 0 20.4 12c-1.7-2.6-4.1-4.2-7.1-4.9l-2.6-2.6z" fill="currentColor"/>
+                          </svg>
+                        ) : (
+                          <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 5C6.5 5 1.9 8.8 0 12c1.9 3.2 6.5 7 12 7s10.1-3.8 12-7c-1.9-3.2-6.5-7-12-7zm0 11.5A4.5 4.5 0 1 1 12 7a4.5 4.5 0 0 1 0 9.5zm0-2A2.5 2.5 0 1 0 12 9a2.5 2.5 0 0 0 0 5.5z" fill="currentColor"/>
+                          </svg>
+                        )}
+                      </button>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </section>
+
             </div>
 
           </div>
-
-
-          {/* ======================================
-              ACCOUNT DETAILS
-          ======================================= */}
-
-          <section className="account-section">
-
-            <h2>Account Details</h2>
-
-            <div className="section-line"></div>
-
-
-            <div className="form-row">
-
-              <div className="form-group">
-
-                <label>
-                  Username <span>*</span>
-                </label>
-
-                <input
-                  type="text"
-                  name="username"
-                  value={formData.username}
-                  onChange={handleChange}
-                  placeholder="Create a username"
-                />
-
-              </div>
-
-
-              <div className="form-group">
-
-                <label>
-                  Password <span>*</span>
-                </label>
-
-                <div className="password-input-wrap">
-                  <input
-                    type={showPassword ? "text" : "password"}
-                    name="password"
-                    value={formData.password}
-                    onChange={handleChange}
-                    placeholder="Minimum 8 characters"
-                    className="password-input"
-                  />
-
-                  <button
-                    type="button"
-                    className="password-toggle"
-                    onClick={() =>
-                      setShowPassword((prev) => !prev)
-                    }
-                    aria-label={
-                      showPassword
-                        ? "Hide password"
-                        : "Show password"
-                    }
-                  >
-                    {showPassword ? (
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M3 3.5L20.5 21l-1.4 1.4L15.8 20A12.9 12.9 0 0 1 12 21c-4.7 0-8.7-2.7-11-6.6a15.8 15.8 0 0 1 3.1-4.1L3 3.5zm8.4 9.4l2.9 2.9a3 3 0 0 1-2.9-2.9zm-1.3-1.3L6 7.9A10.5 10.5 0 0 0 1 12c2.3 3.9 6.3 6.6 11 6.6 2.1 0 4-.5 5.7-1.5l-3.5-3.5A3 3 0 0 1 10.1 11.6zm8.6-4.7A13 13 0 0 1 23 12c-2.3 3.9-6.3 6.6-11 6.6a10.8 10.8 0 0 1-4.9-1.2l2.4-2.4A3 3 0 0 0 15 12c0-.7-.2-1.4-.5-2l3.5-3.5zm-5.6-3.3A7.7 7.7 0 0 1 12 6c4.7 0 8.7 2.7 11 6.6-.7 1.1-1.6 2.2-2.6 3.1l-1.2-1.2A10.1 10.1 0 0 0 20.4 12c-1.7-2.6-4.1-4.2-7.1-4.9l-2.6-2.6z" fill="currentColor"/>
-                      </svg>
-                    ) : (
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M12 5C6.5 5 1.9 8.8 0 12c1.9 3.2 6.5 7 12 7s10.1-3.8 12-7c-1.9-3.2-6.5-7-12-7zm0 11.5A4.5 4.5 0 1 1 12 7a4.5 4.5 0 0 1 0 9.5zm0-2A2.5 2.5 0 1 0 12 9a2.5 2.5 0 0 0 0 5.5z" fill="currentColor"/>
-                      </svg>
-                    )}
-                  </button>
-                </div>
-
-              </div>
-
-            </div>
-
-
-            <div className="form-group">
-
-              <label>
-                Confirm Password <span>*</span>
-              </label>
-
-              <div className="password-input-wrap">
-                <input
-                  type={showConfirmPassword ? "text" : "password"}
-                  name="confirmPassword"
-                  value={formData.confirmPassword}
-                  onChange={handleChange}
-                  placeholder="Confirm your password"
-                  className="password-input"
-                />
-
-                <button
-                  type="button"
-                  className="password-toggle"
-                  onClick={() =>
-                    setShowConfirmPassword((prev) => !prev)
-                  }
-                  aria-label={
-                    showConfirmPassword
-                      ? "Hide confirm password"
-                      : "Show confirm password"
-                  }
-                >
-                  {showConfirmPassword ? (
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M3 3.5L20.5 21l-1.4 1.4L15.8 20A12.9 12.9 0 0 1 12 21c-4.7 0-8.7-2.7-11-6.6a15.8 15.8 0 0 1 3.1-4.1L3 3.5zm8.4 9.4l2.9 2.9a3 3 0 0 1-2.9-2.9zm-1.3-1.3L6 7.9A10.5 10.5 0 0 0 1 12c2.3 3.9 6.3 6.6 11 6.6 2.1 0 4-.5 5.7-1.5l-3.5-3.5A3 3 0 0 1 10.1 11.6zm8.6-4.7A13 13 0 0 1 23 12c-2.3 3.9-6.3 6.6-11 6.6a10.8 10.8 0 0 1-4.9-1.2l2.4-2.4A3 3 0 0 0 15 12c0-.7-.2-1.4-.5-2l3.5-3.5zm-5.6-3.3A7.7 7.7 0 0 1 12 6c4.7 0 8.7 2.7 11 6.6-.7 1.1-1.6 2.2-2.6 3.1l-1.2-1.2A10.1 10.1 0 0 0 20.4 12c-1.7-2.6-4.1-4.2-7.1-4.9l-2.6-2.6z" fill="currentColor"/>
-                    </svg>
-                  ) : (
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M12 5C6.5 5 1.9 8.8 0 12c1.9 3.2 6.5 7 12 7s10.1-3.8 12-7c-1.9-3.2-6.5-7-12-7zm0 11.5A4.5 4.5 0 1 1 12 7a4.5 4.5 0 0 1 0 9.5zm0-2A2.5 2.5 0 1 0 12 9a2.5 2.5 0 0 0 0 5.5z" fill="currentColor"/>
-                    </svg>
-                  )}
-                </button>
-              </div>
-
-            </div>
-
-          </section>
 
 
           {/* ======================================
