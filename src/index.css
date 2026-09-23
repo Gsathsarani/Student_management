@@ -113,6 +113,12 @@ form {
   min-width: 0;
 }
 
+.right-column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 
 /* =========================================
    FORM SECTIONS
@@ -120,6 +126,16 @@ form {
 
 .form-section {
   margin-bottom: 30px;
+  width: 100%;
+}
+
+.account-section {
+  width: 100%;
+  margin-top: 18px;
+}
+
+.account-section .form-row {
+  width: 100%;
 }
 
 .form-section h2,
@@ -292,7 +308,7 @@ form {
 
   width: 100%;
   max-width: 100%;
-  height: 105px;
+  height: 75px;
 
   border: 1px dashed #777;
 
@@ -338,8 +354,8 @@ form {
 }
 
 .plus-icon {
-  width: 34px;
-  height: 34px;
+  width: 24px;
+  height: 24px;
 
   border: 1px dashed #555;
 
@@ -426,7 +442,7 @@ form {
 ========================================= */
 
 .account-section {
-  padding: 0 30px 20px;
+  padding: 0 0 20px;
 }
 
 .account-section .form-group {
@@ -471,20 +487,26 @@ form {
 ========================================= */
 
 .form-actions {
-  display: flex;
+  display: grid;
 
-  justify-content: flex-end;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 
   gap: 12px;
 
-  padding: 20px 30px 10px;
+  width: 100%;
+  max-width: 580px;
+
+  margin: 0 auto;
+
+  padding: 12px 0 8px;
 
   border-top: 1px solid #eee;
 }
 
 .cancel-button,
 .submit-button {
-  min-width: 120px;
+  width: 100%;
+  min-width: 0;
 
   height: 42px;
 
@@ -525,9 +547,9 @@ form {
 ========================================= */
 
 .login-link {
-  padding: 10px 30px 25px;
+  padding: 6px 0 18px;
 
-  text-align: right;
+  text-align: center;
 
   font-size: 13px;
 
