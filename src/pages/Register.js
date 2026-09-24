@@ -196,23 +196,29 @@ function Register() {
 
       photo: photo,
 
-      motherName:
-        formData.motherName,
+      parent1Name:
+        formData.parent1Name,
 
-      motherContact:
-        formData.motherContact,
+      parent1Relationship:
+        formData.parent1Relationship,  
 
-      motherProfession:
-        formData.motherProfession,
+      parent1Contact:
+        formData.parent1Contact,
 
-      fatherName:
-        formData.fatherName,
+      parent1Profession:
+        formData.parent1Profession,
 
-      fatherContact:
-        formData.fatherContact,
+      parent2Name:
+        formData.parent2Name,
 
-      fatherProfession:
-        formData.fatherProfession,
+      parent2Relationship:
+        formData.parent2Relationship,
+
+      parent2Contact:
+        formData.parent2Contact,
+
+      parent2Profession:
+        formData.parent2Profession,
 
       accountName:
         formData.accountName,
@@ -642,19 +648,60 @@ function Register() {
 
 
                 {/* Mother */}
-                <div className="form-group">
+                <div className="form-row">
 
-                  <label>
-                    Mother's Name
-                  </label>
+                  <div className="form-group">
 
-                  <input
-                    type="text"
-                    name="motherName"
-                    value={formData.motherName}
-                    onChange={handleChange}
-                    placeholder="Enter mother's name"
-                  />
+                    <label>
+                      Parent's Name
+                    </label>
+
+                    <input
+                      type="tel"
+                      name="parent1Name"
+                      value={formData.parent1Name}
+                      onChange={handleChange}
+                      placeholder="Parent's name"
+                    />
+
+                  </div>
+
+
+                  <div className="form-group">
+
+                    <label>
+                      Relationship <span>*</span>
+                    </label>
+
+                    <select
+                      name="relationship"
+                      value={formData.parent1Relationship}
+                      onChange={handleChange}
+                    >
+
+                      <option value="">
+                        Select relationship
+                      </option>
+
+                      <option value="Father">
+                        Father
+                      </option>
+
+                      <option value="Mother">
+                        Mother
+                      </option>
+
+                      <option value="Guardian">
+                        Guardian
+                      </option>
+
+                      <option value="Other">
+                        Other
+                      </option>
+
+                    </select>
+
+                  </div>
 
                 </div>
 
@@ -664,13 +711,13 @@ function Register() {
                   <div className="form-group">
 
                     <label>
-                      Mother's Contact
+                      Contact No
                     </label>
 
                     <input
                       type="tel"
-                      name="motherContact"
-                      value={formData.motherContact}
+                      name="parent1Contact"
+                      value={formData.parent1Contact}
                       onChange={handleChange}
                       placeholder="Contact number"
                     />
@@ -681,13 +728,13 @@ function Register() {
                   <div className="form-group">
 
                     <label>
-                      Mother's Profession
+                      Profession
                     </label>
 
                     <input
                       type="text"
-                      name="motherProfession"
-                      value={formData.motherProfession}
+                      name="parent1Profession"
+                      value={formData.parent1Profession}
                       onChange={handleChange}
                       placeholder="Profession"
                     />
@@ -698,19 +745,60 @@ function Register() {
 
 
                 {/* Father */}
-                <div className="form-group">
+                <div className="form-row">
 
-                  <label>
-                    Father's Name
-                  </label>
+                  <div className="form-group">
 
-                  <input
-                    type="text"
-                    name="fatherName"
-                    value={formData.fatherName}
-                    onChange={handleChange}
-                    placeholder="Enter father's name"
-                  />
+                    <label>
+                      Parent's Name
+                    </label>
+
+                    <input
+                      type="tel"
+                      name="parent2Name"
+                      value={formData.parent2Name}
+                      onChange={handleChange}
+                      placeholder="Parent's name"
+                    />
+
+                  </div>
+
+
+                  <div className="form-group">
+
+                    <label>
+                      Relationship <span>*</span>
+                    </label>
+
+                    <select
+                      name="parent2Relationship"
+                      value={formData.parent2Relationship}
+                      onChange={handleChange}
+                    >
+
+                      <option value="">
+                        Select relationship
+                      </option>
+
+                      <option value="Father">
+                        Father
+                      </option>
+
+                      <option value="Mother">
+                        Mother
+                      </option>
+
+                      <option value="Guardian">
+                        Guardian
+                      </option>
+
+                      <option value="Other">
+                        Other
+                      </option>
+
+                    </select>
+
+                  </div>
 
                 </div>
 
@@ -720,13 +808,13 @@ function Register() {
                   <div className="form-group">
 
                     <label>
-                      Father's Contact
+                      Contact No
                     </label>
 
                     <input
                       type="tel"
-                      name="fatherContact"
-                      value={formData.fatherContact}
+                      name="parent2Contact"
+                      value={formData.parent2Contact}
                       onChange={handleChange}
                       placeholder="Contact number"
                     />
@@ -737,13 +825,13 @@ function Register() {
                   <div className="form-group">
 
                     <label>
-                      Father's Profession
+                      Profession
                     </label>
 
                     <input
                       type="text"
-                      name="fatherProfession"
-                      value={formData.fatherProfession}
+                      name="parent2Profession"
+                      value={formData.parent2Profession}
                       onChange={handleChange}
                       placeholder="Profession"
                     />
