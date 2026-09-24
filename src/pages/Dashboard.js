@@ -188,66 +188,88 @@ function Dashboard() {
 
             <div>
               <span>
-                Mother's Name
+                Parent 1 Name
               </span>
 
               <strong>
-                {currentUser?.motherName || "-"}
+                {currentUser?.parent1Name || "-"}
               </strong>
             </div>
 
 
             <div>
               <span>
-                Mother's Contact
+                Parent 1 Relationship
               </span>
 
               <strong>
-                {currentUser?.motherContact || "-"}
+                {currentUser?.parent1Relationship || "-"}
               </strong>
             </div>
 
 
             <div>
               <span>
-                Father's Name
+                Parent 1 Contact
               </span>
 
               <strong>
-                {currentUser?.fatherName || "-"}
+                {currentUser?.parent1Contact || "-"}
               </strong>
             </div>
 
 
             <div>
               <span>
-                Father's Contact
+                Parent 1 Profession
               </span>
 
               <strong>
-                {currentUser?.fatherContact || "-"}
+                {currentUser?.parent1Profession || "-"}
               </strong>
             </div>
 
 
             <div>
               <span>
-                Guardian's Name
+                Parent 2 Name
               </span>
 
               <strong>
-                {currentUser?.guardianName || "-"}
+                {currentUser?.parent2Name || "-"}
               </strong>
             </div>
 
 
             <div>
               <span>
-                Guardian's Contact
+                Parent 2 Relationship
               </span>
 
               <strong>
-                {currentUser?.guardianContact || "-"}
+                {currentUser?.parent2Relationship || "-"}
+              </strong>
+            </div>
+
+
+            <div>
+              <span>
+                Parent 2 Contact
+              </span>
+
+              <strong>
+                {currentUser?.parent2Contact || "-"}
+              </strong>
+            </div>
+
+
+            <div>
+              <span>
+                Parent 2 Profession
+              </span>
+
+              <strong>
+                {currentUser?.parent2Profession || "-"}
               </strong>
             </div>
 
