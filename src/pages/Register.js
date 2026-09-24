@@ -8,21 +8,26 @@ function Register() {
   // Student information
   const [formData, setFormData] = useState({
     name: "",
-    emisNo: "",
-    registrationNo: "",
-    rollNo: "",
-    section: "",
-    email: "",
     dateOfBirth: "",
+    gender: "",
+    grade: "",
+    studentType: "",
+    address: "",
+    zipCode: "",
+    city: "",
+    district: "",
+    admissionDate: "",
+    contactNo: "",
 
     // Parent information
-    motherName: "",
-    motherContact: "",
-    motherProfession: "",
-
-    fatherName: "",
-    fatherContact: "",
-    fatherProfession: "",
+    parent1Name: "",
+    parent1Relationship: "",
+    parent1Contact: "",
+    parent1Profession: "",
+    parent2Name: "",
+    parent2Relationship: "",
+    parent2Contact: "",
+    parent2Profession: "",
 
     // Account information
     accountName: "",
@@ -95,12 +100,19 @@ function Register() {
     // Required fields
     if (
       !formData.name ||
-      !formData.emisNo ||
-      !formData.registrationNo ||
-      !formData.rollNo ||
-      !formData.section ||
-      !formData.email ||
       !formData.dateOfBirth ||
+      !formData.gender ||
+      !formData.grade ||
+      !formData.studentType ||
+      !formData.address ||
+      !formData.zipCode ||
+      !formData.city ||
+      !formData.district ||
+      !formData.admissionDate ||
+      !formData.contactNo ||
+      !formData.parent1Relationship ||
+      !formData.parent1Name ||
+      !formData.parent1Contact ||
       !formData.accountName ||
       !formData.username ||
       !formData.password ||
@@ -180,19 +192,26 @@ function Register() {
 
       name: formData.name,
 
-      emisNo: formData.emisNo,
-
-      registrationNo:
-        formData.registrationNo,
-
-      rollNo: formData.rollNo,
-
-      section: formData.section,
-
-      email: formData.email,
-
       dateOfBirth:
         formData.dateOfBirth,
+
+      gender: formData.gender,
+
+      grade: formData.grade,
+
+      studentType: formData.studentType,
+
+      address: formData.address,
+
+      zipCode: formData.zipCode,
+
+      city: formData.city,
+
+      district: formData.district,
+
+      admissionDate: formData.admissionDate,
+
+      contactNo: formData.contactNo,
 
       photo: photo,
 
@@ -674,7 +693,7 @@ function Register() {
                     </label>
 
                     <select
-                      name="relationship"
+                      name="parent1Relationship"
                       value={formData.parent1Relationship}
                       onChange={handleChange}
                     >
